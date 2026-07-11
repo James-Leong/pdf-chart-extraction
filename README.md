@@ -1,8 +1,7 @@
 # PDF Chart Extraction
 
 [![CI](https://github.com/James-Leong/pdf-chart-extraction/actions/workflows/ci.yml/badge.svg)](https://github.com/James-Leong/pdf-chart-extraction/actions/workflows/ci.yml)
-[![PyPI](https://img.shields.io/pypi/v/pdf-chart-extraction.svg)](https://pypi.org/project/pdf-chart-extraction/)
-[![Python](https://img.shields.io/pypi/pyversions/pdf-chart-extraction.svg)](https://pypi.org/project/pdf-chart-extraction/)
+[![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 [English](#english) | [中文](#chinese)
@@ -28,11 +27,40 @@ This project bridges the gap between text-only PDF parsing and visual understand
 
 ### Installation
 
+#### Use as a Codex skill
+
+Install the skills-only plugin from this GitHub repository:
+
 ```bash
-# From PyPI
-pip install pdf-chart-extraction
+codex plugin marketplace add James-Leong/pdf-chart-extraction
+codex plugin marketplace list
+```
+
+Then open Codex or ChatGPT Desktop, go to Plugins, choose the `pdf-chart-extraction-local` marketplace, install **PDF Chart Extraction**, and start a new task.
+
+Install the Python CLI used by the skill:
+
+```bash
+pip install "git+https://github.com/James-Leong/pdf-chart-extraction.git"
+```
+
+After that, ask Codex:
+
+```text
+Use the pdf-chart-extraction skill to extract figures and tables from paper.pdf into ./charts.
+```
+
+The skill guides Codex to run `pdf-chart-extract`, read `index.json`, and use the extracted PNG files for visual analysis.
+
+#### Python package
+
+```bash
+# From GitHub
+pip install "git+https://github.com/James-Leong/pdf-chart-extraction.git"
 
 # From source
+git clone https://github.com/James-Leong/pdf-chart-extraction.git
+cd pdf-chart-extraction
 pip install -e .
 
 # With development dependencies
@@ -118,11 +146,40 @@ See [`docs/SKILL_MARKETPLACE.md`](./docs/SKILL_MARKETPLACE.md) for the skills-on
 
 ### 安装
 
+#### 作为 Codex skill 使用
+
+从本 GitHub 仓库安装 skills-only plugin：
+
 ```bash
-# 从 PyPI 安装
-pip install pdf-chart-extraction
+codex plugin marketplace add James-Leong/pdf-chart-extraction
+codex plugin marketplace list
+```
+
+然后打开 Codex 或 ChatGPT Desktop，进入 Plugins，选择 `pdf-chart-extraction-local` marketplace，安装 **PDF Chart Extraction**，并新开一个任务。
+
+安装该 skill 会调用的 Python CLI：
+
+```bash
+pip install "git+https://github.com/James-Leong/pdf-chart-extraction.git"
+```
+
+之后可以直接对 Codex 说：
+
+```text
+使用 pdf-chart-extraction skill，把 paper.pdf 里的图和表提取到 ./charts。
+```
+
+该 skill 会引导 Codex 运行 `pdf-chart-extract`，读取 `index.json`，并使用导出的 PNG 图片进行视觉分析。
+
+#### Python 包
+
+```bash
+# 从 GitHub 安装
+pip install "git+https://github.com/James-Leong/pdf-chart-extraction.git"
 
 # 从源码安装
+git clone https://github.com/James-Leong/pdf-chart-extraction.git
+cd pdf-chart-extraction
 pip install -e .
 
 # 包含开发依赖

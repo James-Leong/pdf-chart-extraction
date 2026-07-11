@@ -23,6 +23,18 @@ Then restart the ChatGPT desktop app, open Plugins, choose the repo marketplace,
 
 The same marketplace can be used by Codex CLI, desktop Codex, and the IDE extension once the marketplace source is added.
 
+## Fastest Open Source Install
+
+For users who find this project on GitHub:
+
+```bash
+codex plugin marketplace add James-Leong/pdf-chart-extraction
+codex plugin marketplace list
+pip install "git+https://github.com/James-Leong/pdf-chart-extraction.git"
+```
+
+Then install **PDF Chart Extraction** from the plugin browser and start a new Codex task.
+
 ## Public Submission Checklist
 
 - Plugin name, short description, long description, category, logo, website, support URL, privacy policy URL, and terms URL

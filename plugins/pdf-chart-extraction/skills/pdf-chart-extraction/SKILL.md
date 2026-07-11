@@ -13,7 +13,7 @@ Use this skill when a user needs to extract figures, charts, or tables from a PD
 2. Install the Python package if needed:
 
    ```bash
-   pip install pdf-chart-extraction
+   pip install "git+https://github.com/James-Leong/pdf-chart-extraction.git"
    ```
 
 3. Extract assets:
