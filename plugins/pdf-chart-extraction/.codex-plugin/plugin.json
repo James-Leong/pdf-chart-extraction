@@ -1,0 +1,6 @@
+{
+  "name": "pdf-chart-extraction",
+  "version": "0.1.0",
+  "description": "Extract charts, figures, and tables from academic PDFs for AI agent analysis.",
+  "skills": "./skills/"
+}
